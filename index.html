@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EstateArms — Probate-grade inventory for collectible & NFA estates</title>
+  <meta name="description" content="The first inventory and probate-administration system built for estates containing collectible firearms, NFA items, vehicles, and high-value assets. Court-ready reports, NFA transfer tracking, and AI-assisted identification — for executors, NFA trustees, FFLs, and probate attorneys." />
+
+  <meta property="og:title" content="EstateArms — Probate-grade inventory for collectible estates" />
+  <meta property="og:description" content="Court-ready inventory & NFA transfer tracking for executors, trustees, FFLs, and probate firms." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="logo" aria-label="EstateArms home">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="28" height="28" rx="3" stroke="currentColor" stroke-width="1.5" />
+        <path d="M9 22 L9 10 L16 16 L23 10 L23 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <circle cx="16" cy="22" r="1.2" fill="currentColor" />
+      </svg>
+      <span>EstateArms</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#audiences">Who it's for</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#waitlist" class="btn btn-primary btn-sm">Request access</a>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Now accepting early access · Q3 2026
+        </div>
+        <h1 class="hero-title">
+          Probate-grade inventory for <em>NFA-bearing</em> estates.
+        </h1>
+        <p class="hero-lede">
+          The first inventory and probate-administration system built for executors handling collectible
+          firearms, NFA items, vehicles, and high-value chattels. Court-ready reports,
+          Form 5 transfer tracking, and AI-assisted identification &mdash; engineered by an active executor
+          and NFA correspondent.
+        </p>
+        <div class="hero-ctas">
+          <a href="#waitlist" class="btn btn-primary">Request early access</a>
+          <a href="#pricing" class="btn btn-ghost">See pricing &rarr;</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>40+</strong><span>valuation sources</span></div>
+          <div><strong>Form 1–5</strong><span>NFA tracking</span></div>
+          <div><strong>Schedule A–E</strong><span>court-ready output</span></div>
+          <div><strong>SQLite</strong><span>per-estate isolation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The problem -->
+    <section class="section problem">
+      <div class="container">
+        <div class="section-eyebrow">The problem</div>
+        <h2 class="section-title">
+          Existing estate-inventory tools <em>do not understand firearms.</em>
+        </h2>
+        <p class="section-lede">
+          Generic probate software treats a $48,000 transferable machine gun the same as a kitchen
+          appliance. There's no NFA tax-stamp field, no Form 5 transferee tracking, no
+          rare-variant detection, no chain-of-custody for items the court will scrutinize. Executors
+          end up in spreadsheets, attorneys redraft inventories from photos, and FFLs charge five
+          figures to "do the paperwork."
+        </p>
+
+        <div class="pain-grid">
+          <div class="pain">
+            <div class="pain-num">01</div>
+            <h3>Misvaluation costs heirs.</h3>
+            <p>A correctly identified Singer 1911 is $300K. A "Colt-pattern .45 pistol" on a probate inventory is $1,200. The difference walks out the door.</p>
+          </div>
+          <div class="pain">
+            <div class="pain-num">02</div>
+            <h3>NFA paperwork stalls everything.</h3>
+            <p>Without organized Form 1/4/5 status, tax-stamp numbers, and transferee tracking, an estate sits in probate for 12&ndash;24 months waiting on ATF.</p>
+          </div>
+          <div class="pain">
+            <div class="pain-num">03</div>
+            <h3>The court inventory is unfit.</h3>
+            <p>Florida Form P-3.0700 has no firearm-specific fields. Custom schedules end up handwritten, photocopied, and inconsistent across filings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section-eyebrow">What you get</div>
+        <h2 class="section-title">
+          A complete probate workflow,<br />designed around how an executor <em>actually works.</em>
+        </h2>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+            </div>
+            <h3>Rare-variant first identification</h3>
+            <p>AI chatbot trained to consider Singer 1911, IBM Garand, German WWII codes, BREN/Lee-Enfield variants <em>before</em> defaulting to a standard issue.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </div>
+            <h3>Full NFA transfer tracking</h3>
+            <p>Tax stamp number, Form type (1/2/3/4/5), transfer date, transferee, registration status &mdash; per item, queryable, exportable.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+            </div>
+            <h3>Court-ready inventory report</h3>
+            <p>Probate-style PDF with Schedules A&ndash;E, subtotals, NFA flagging, executor signature block. Print or file as-is.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            </div>
+            <h3>Photo &rarr; data scanner</h3>
+            <p>Upload a photo of an unknown item. AI extracts make, model, caliber, serial markings, and pre-fills the inventory form for review.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c.5-3 3.5-5 7-5s6.5 2 7 5"/><circle cx="17" cy="6" r="2.5"/><path d="M22 17c-.4-2-2-3.5-4.5-3.5"/></svg>
+            </div>
+            <h3>Distribution plan by heir</h3>
+            <p>Assign a beneficiary and distribution status to any item. Live view of who-gets-what, with subtotals and unassigned-item flags.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 12 11 12"/></svg>
+            </div>
+            <h3>Court-defensible audit log</h3>
+            <p>Every create, update, and delete timestamped automatically. Filterable, exportable, ready for opposing counsel.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+            </div>
+            <h3>Cost-basis & acquisition</h3>
+            <p>Date, price, and source on every item &mdash; the basis IRS needs and most spreadsheets forget. Sufficient for 706 estate-tax filing.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12c-1.5-4-5-7-9-7s-7.5 3-9 7c1.5 4 5 7 9 7s7.5-3 9-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Disputes & holds tracking</h3>
+            <p>Items held by FFL, missing, contested, or in litigation each get their own dossier with attorney, court date, and related documents.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audiences -->
+    <section class="section audiences" id="audiences">
+      <div class="container">
+        <div class="section-eyebrow">Built for three roles</div>
+        <h2 class="section-title">
+          Whether you're administering <em>one</em> estate or <em>fifty</em>.
+        </h2>
+
+        <div class="audience-grid">
+          <article class="audience">
+            <div class="audience-tag">Individual</div>
+            <h3>Executors & personal representatives</h3>
+            <p>You inherited the job. You're not an FFL, not an attorney, not an appraiser &mdash; but the court still expects a competent inventory and a defensible distribution. EstateArms turns 200 hours of work into 20.</p>
+            <ul class="audience-list">
+              <li>Single-estate workflow</li>
+              <li>AI chatbot replaces $400/hr appraiser calls</li>
+              <li>One-click court report</li>
+            </ul>
+          </article>
+
+          <article class="audience audience-highlight">
+            <div class="audience-tag">Professional</div>
+            <h3>FFLs & NFA trustees</h3>
+            <p>Estate-liquidation services that scale. Onboard ten estates, track every Form 5 in progress, and hand finished inventories to the personal representative. White-label the PDF with your firm's letterhead.</p>
+            <ul class="audience-list">
+              <li>Up to ten active estates per seat</li>
+              <li>Form-5 transfer pipeline view</li>
+              <li>Branded report export</li>
+            </ul>
+          </article>
+
+          <article class="audience">
+            <div class="audience-tag">Enterprise</div>
+            <h3>Probate attorneys & firms</h3>
+            <p>Stop billing paralegal hours to retype handwritten gun lists. Centralize every estate your firm administers, give associates scoped access, and pull court-ready inventories on demand.</p>
+            <ul class="audience-list">
+              <li>Unlimited estates and seats</li>
+              <li>SSO, audit log export, API</li>
+              <li>Dedicated onboarding</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section-eyebrow">Pricing</div>
+        <h2 class="section-title">
+          Plans that match how the estate is <em>actually administered.</em>
+        </h2>
+        <p class="section-lede">
+          Most executors handle exactly one estate over 12&ndash;18 months. Firms handle many at
+          once. Both deserve fair pricing.
+        </p>
+
+        <div class="price-grid">
+
+          <article class="price-card">
+            <h3 class="price-name">Free</h3>
+            <div class="price-amount">$0</div>
+            <p class="price-blurb">Try it on a small estate.</p>
+            <ul class="price-features">
+              <li>1 estate</li>
+              <li>Up to 25 inventory items</li>
+              <li>CSV export</li>
+              <li class="muted">No AI chatbot</li>
+              <li class="muted">No court report</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-outline btn-block">Start free</a>
+          </article>
+
+          <article class="price-card price-featured">
+            <div class="price-tag">Most popular</div>
+            <h3 class="price-name">Executor</h3>
+            <div class="price-amount">$29<span>/mo</span></div>
+            <p class="price-blurb">$290/yr · the working executor's plan.</p>
+            <ul class="price-features">
+              <li>1 estate, unlimited items</li>
+              <li>AI chatbot &amp; photo scanner</li>
+              <li>Court-ready PDF report</li>
+              <li>Full NFA transfer tracking</li>
+              <li>Distribution plan &amp; audit log</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-primary btn-block">Request access</a>
+          </article>
+
+          <article class="price-card">
+            <h3 class="price-name">Professional</h3>
+            <div class="price-amount">$99<span>/mo</span></div>
+            <p class="price-blurb">$990/yr · for FFLs &amp; NFA trustees.</p>
+            <ul class="price-features">
+              <li>Up to 10 estates</li>
+              <li>3 user seats</li>
+              <li>White-label PDF letterhead</li>
+              <li>Bulk Form-5 pipeline view</li>
+              <li>Priority email support</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-outline btn-block">Request access</a>
+          </article>
+
+          <article class="price-card">
+            <h3 class="price-name">Firm</h3>
+            <div class="price-amount">$299<span>/mo</span></div>
+            <p class="price-blurb">$2,990/yr · probate practice scale.</p>
+            <ul class="price-features">
+              <li>Unlimited estates &amp; seats</li>
+              <li>SSO &amp; role-based access</li>
+              <li>REST API access</li>
+              <li>Audit log export</li>
+              <li>Dedicated onboarding</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-outline btn-block">Talk to sales</a>
+          </article>
+
+        </div>
+
+        <div class="price-onetime">
+          <div>
+            <div class="onetime-eyebrow">Lifetime · one-time</div>
+            <h3 class="onetime-title">Single-Estate License — $499</h3>
+            <p>For executors of exactly one estate who'd rather pay once. Lifetime access to every Executor-tier feature, locked to a single estate. Pay it from estate funds and the heirs reimburse from distribution.</p>
+          </div>
+          <a href="#waitlist" class="btn btn-secondary">Buy lifetime license</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / credibility -->
+    <section class="section trust">
+      <div class="container narrow">
+        <blockquote class="quote">
+          <p>
+            "Built by an active executor managing an estate with forty-six firearms, fifteen
+            collectible vehicles, and NFA-registered Class III items. Every field, every report,
+            every workflow exists because the court, the trust attorney, the FFL, or the IRS asked
+            for it."
+          </p>
+          <footer>— EstateArms, founder note</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container narrow">
+        <div class="section-eyebrow">Questions</div>
+        <h2 class="section-title">Frequently asked.</h2>
+
+        <details>
+          <summary>Is this legal advice?</summary>
+          <p>No. EstateArms is software. It will not replace your probate attorney, your trust attorney, your CPA, or your FFL. It will give all of them <em>better source data</em> to work from.</p>
+        </details>
+        <details>
+          <summary>Does this file Form 5 with ATF for me?</summary>
+          <p>Not yet. EstateArms tracks every field a Form 5 requires &mdash; tax stamp number, transferor, transferee, dates &mdash; so the paperwork your NFA correspondent submits is correct on the first try. Direct e-filing is on the roadmap.</p>
+        </details>
+        <details>
+          <summary>How is my estate data secured?</summary>
+          <p>Each estate lives in an isolated SQLite database scoped to your account. Cloud-hosted tier uses encrypted-at-rest storage; self-hosted tier puts the database on your own server. We never share or sell inventory data. Period.</p>
+        </details>
+        <details>
+          <summary>Can the AI identify firearms reliably?</summary>
+          <p>For 95% of common items: yes, with rare-variant priority. For unique pieces, prototypes, or unmarked items, the AI provides candidate identifications and asks clarifying questions instead of guessing. Every identification can be overridden by a human appraiser.</p>
+        </details>
+        <details>
+          <summary>What if I cancel mid-estate?</summary>
+          <p>Your data is yours. Export the full inventory, the activity log, and every photo as a CSV/ZIP at any time on any tier (yes, including Free). No lock-in.</p>
+        </details>
+        <details>
+          <summary>Can my probate attorney see the estate too?</summary>
+          <p>On Professional and Firm tiers, yes &mdash; add their seat with view-only or edit access. On Executor tier, export the court-ready PDF and email it.</p>
+        </details>
+        <details>
+          <summary>Why is the founder credible?</summary>
+          <p>Active estate executor, NFA correspondent, durable power of attorney holder, property manager, and software engineer. Every feature was first a problem the founder personally hit while administering an estate of this kind.</p>
+        </details>
+        <details>
+          <summary>When does it launch?</summary>
+          <p>Early access opens Q3 2026 to waitlist members. General availability Q4 2026. Founding-member pricing locks in for the life of your subscription.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Waitlist CTA -->
+    <section class="section cta-band" id="waitlist">
+      <div class="container narrow">
+        <h2 class="cta-title">Be one of the first hundred.</h2>
+        <p class="cta-lede">Founding-member pricing. Direct line to the founder. Influence on the roadmap. Reserve your spot.</p>
+        <form class="waitlist-form" id="waitlistForm" novalidate>
+          <input type="email" name="email" placeholder="you@firm.com" required aria-label="Email address" autocomplete="email" />
+          <select name="role" required aria-label="Your role">
+            <option value="" disabled selected>I'm an…</option>
+            <option value="executor">Executor / Personal Rep</option>
+            <option value="trustee">NFA Trustee</option>
+            <option value="ffl">FFL / Estate liquidator</option>
+            <option value="attorney">Probate Attorney</option>
+            <option value="other">Something else</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Request access</button>
+        </form>
+        <p class="waitlist-success" id="waitlistSuccess" hidden>You're on the list. Watch for an email from craig@estatearms.com within 48 hours.</p>
+        <p class="cta-fineprint">No spam. No selling. One personal email when access opens.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect x="2" y="2" width="28" height="28" rx="3" stroke="currentColor" stroke-width="1.5" />
+            <path d="M9 22 L9 10 L16 16 L23 10 L23 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            <circle cx="16" cy="22" r="1.2" fill="currentColor" />
+          </svg>
+          <span>EstateArms</span>
+        </div>
+        <p>Probate-grade inventory for collectible &amp; NFA estates.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#audiences">Who it's for</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#waitlist">Request access</a>
+        <a href="mailto:craig@estatearms.com">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 EstateArms. All rights reserved.</span>
+      <span>EstateArms is software. It is not legal, tax, or appraisal advice.</span>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
