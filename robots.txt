@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# AI guidance file
+# llms.txt: https://estatearms.com/llms.txt
+
+Sitemap: https://estatearms.com/sitemap.xml
