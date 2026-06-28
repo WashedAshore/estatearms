@@ -61,6 +61,7 @@ HEADER = """<!doctype html>
     </section>
 
     <section class="article-body">
+{body_deco_block}
       <div class="container">
 """
 
@@ -121,23 +122,23 @@ FOOTER = """      </div>
 """
 
 
-def page(slug, title, crumb, h1, description, lede, body, decorations=None):
+def page(slug, title, crumb, h1, description, lede, body, decorations=None, body_decorations=None):
     """Assemble one HTML file from chrome + body.
-    `decorations` is a list of (image_filename, variant_class) tuples."""
-    deco_block = ""
-    if decorations:
-        lines = []
-        for img, variant in decorations:
-            lines.append(
-                f'      <img src="{img}" alt="" aria-hidden="true" '
-                f'class="page-deco page-deco--{variant}" />'
-            )
-        deco_block = "\n".join(lines)
+    `decorations` and `body_decorations` are lists of (image, variant) tuples."""
+    def build(items, base_class):
+        if not items: return ""
+        return "\n".join(
+            f'      <img src="{img}" alt="" aria-hidden="true" class="{base_class} {base_class}--{variant}" />'
+            for img, variant in items
+        )
+    deco_block = build(decorations, "page-deco")
+    body_deco_block = build(body_decorations, "page-deco-body")
     html = (
         HEADER.format(
             slug=slug, title=title, crumb=crumb, h1=h1,
             description=description, lede=lede,
             deco_block=deco_block,
+            body_deco_block=body_deco_block,
         )
         + body.strip() + "\n"
         + FOOTER
@@ -210,6 +211,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-pistol.png", "primary"), ("schematic-revolver.png", "secondary")],
+    body_decorations=[("schematic-rifle.png", "tr"), ("schematic-garand.png", "ml"), ("schematic-shotgun.png", "mr"), ("schematic-pistol.png", "bl"), ("schematic-ar15.png", "br")],
 ))
 
 PAGES.append(dict(
@@ -260,6 +262,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-thompson.png", "primary"), ("schematic-suppressor.png", "secondary"), ("schematic-form4.png", "form")],
+    body_decorations=[("schematic-suppressor.png", "tl"), ("schematic-form5.png", "form-tr"), ("schematic-ar15.png", "ml"), ("schematic-thompson.png", "mr"), ("schematic-form1.png", "form-bl"), ("schematic-suppressor.png", "br")],
 ))
 
 PAGES.append(dict(
@@ -315,6 +318,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-garand.png", "primary"), ("schematic-shotgun.png", "secondary")],
+    body_decorations=[("schematic-pistol.png", "tl"), ("schematic-rifle.png", "tr"), ("schematic-revolver.png", "ml"), ("schematic-thompson.png", "mr"), ("schematic-ar15.png", "bl"), ("schematic-form5.png", "form-bl")],
 ))
 
 PAGES.append(dict(
@@ -370,6 +374,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-shotgun.png", "primary"), ("schematic-revolver.png", "secondary")],
+    body_decorations=[("schematic-revolver.png", "tl"), ("schematic-pistol.png", "tr"), ("schematic-garand.png", "ml"), ("schematic-rifle.png", "mr"), ("schematic-ar15.png", "br")],
 ))
 
 PAGES.append(dict(
@@ -415,6 +420,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-ar15.png", "primary"), ("schematic-rifle.png", "secondary")],
+    body_decorations=[("schematic-revolver.png", "tl"), ("schematic-thompson.png", "tr"), ("schematic-shotgun.png", "ml"), ("schematic-garand.png", "mr"), ("schematic-pistol.png", "bl"), ("schematic-form5.png", "form-mr")],
 ))
 
 PAGES.append(dict(
@@ -474,6 +480,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-form5.png", "form"), ("schematic-revolver.png", "primary")],
+    body_decorations=[("schematic-rifle.png", "tr"), ("schematic-shotgun.png", "ml"), ("schematic-thompson.png", "mr"), ("schematic-suppressor.png", "bl"), ("schematic-form4.png", "form-mr"), ("schematic-pistol.png", "br")],
 ))
 
 PAGES.append(dict(
@@ -541,6 +548,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-form5.png", "form"), ("schematic-thompson.png", "primary"), ("schematic-suppressor.png", "secondary")],
+    body_decorations=[("schematic-thompson.png", "tl"), ("schematic-suppressor.png", "tr"), ("schematic-ar15.png", "ml"), ("schematic-form1.png", "form-mr"), ("schematic-garand.png", "mr"), ("schematic-form4.png", "form-bl"), ("schematic-suppressor.png", "br")],
 ))
 
 PAGES.append(dict(
@@ -610,6 +618,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-pistol.png", "secondary")],
+    body_decorations=[("schematic-rifle.png", "tr"), ("schematic-revolver.png", "ml"), ("schematic-form5.png", "form-mr"), ("schematic-pistol.png", "br")],
 ))
 
 PAGES.append(dict(
@@ -661,6 +670,7 @@ PAGES.append(dict(
 </div>
 """,
     decorations=[("schematic-rifle.png", "primary")],
+    body_decorations=[("schematic-pistol.png", "tl"), ("schematic-thompson.png", "tr"), ("schematic-revolver.png", "ml"), ("schematic-ar15.png", "mr"), ("schematic-garand.png", "bl"), ("schematic-shotgun.png", "br")],
 ))
 
 # ─── Build all ───

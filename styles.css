@@ -1125,3 +1125,30 @@ button { font-family: inherit; }
   user-select: none;
 }
 .section > .container { position: relative; z-index: 1; }
+
+/* ───── Body decorations: drift through article-body content ─────
+   Six positional variants distributed top→bottom, alternating sides.
+   Article-body already has position:relative; overflow:hidden. */
+.page-deco-body {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+  filter: invert(1) brightness(1.6) sepia(0.3) hue-rotate(345deg) saturate(0.8);
+  mix-blend-mode: screen;
+}
+.page-deco-body--tl { top: 8%;  left: -8%;  width: clamp(280px, 36vw, 540px); opacity: 0.045; transform: rotate(7deg); }
+.page-deco-body--tr { top: 18%; right: -10%; width: clamp(320px, 40vw, 600px); opacity: 0.05;  transform: rotate(-4deg); }
+.page-deco-body--ml { top: 36%; left: -6%;  width: clamp(260px, 32vw, 480px); opacity: 0.045; transform: rotate(-6deg); }
+.page-deco-body--mr { top: 50%; right: -8%; width: clamp(300px, 38vw, 560px); opacity: 0.05;  transform: rotate(3deg); }
+.page-deco-body--bl { top: 68%; left: -7%;  width: clamp(280px, 34vw, 500px); opacity: 0.045; transform: rotate(5deg); }
+.page-deco-body--br { top: 84%; right: -9%; width: clamp(260px, 32vw, 480px); opacity: 0.045; transform: rotate(-5deg); }
+/* form variants — smaller and more upright */
+.page-deco-body--form-tr { top: 12%; right: 1%; width: clamp(160px, 18vw, 260px); opacity: 0.055; transform: rotate(-4deg); }
+.page-deco-body--form-mr { top: 44%; right: 1%; width: clamp(160px, 18vw, 260px); opacity: 0.05;  transform: rotate(3deg); }
+.page-deco-body--form-bl { top: 76%; left: 1%;  width: clamp(140px, 16vw, 220px); opacity: 0.05;  transform: rotate(-2deg); }
+
+@media (max-width: 720px) {
+  .page-deco-body { opacity: 0.04; }
+  .page-deco-body--tl, .page-deco-body--bl, .page-deco-body--form-bl { display: none; }
+}
