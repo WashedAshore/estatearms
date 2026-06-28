@@ -1,3 +1,28 @@
+/* ───────────────────────── Page surface ─────────────────────────
+   Soft warm-light pools at top and bottom-right (like an overhead lamp
+   and a far wall sconce) plus a fine grain that scrolls with the page —
+   gives the dark walnut surface tactile depth. */
+html { background: #1a140e; }
+body {
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(199, 155, 88, 0.12), transparent 65%) fixed,
+    radial-gradient(ellipse 60% 50% at 100% 110%, rgba(138, 58, 40, 0.10), transparent 70%) fixed,
+    radial-gradient(ellipse 50% 40% at 0% 50%, rgba(78, 50, 28, 0.10), transparent 75%) fixed;
+  background-color: #1a140e;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0 0.70  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+}
+.site-header, main, footer { position: relative; z-index: 1; }
+
 /* ───────────────────────── Tokens ───────────────────────── */
 :root {
   /* Color: leather-bound study. Warm walnut surfaces, aged brass accents,
@@ -183,11 +208,30 @@ button { font-family: inherit; }
 
 /* ───────────────────────── Hero ───────────────────────── */
 .hero {
+  position: relative;
+  isolation: isolate;
   padding: clamp(var(--space-16), 11vw, var(--space-32)) 0 clamp(var(--space-12), 8vw, var(--space-24));
   background:
-    radial-gradient(ellipse 90% 70% at 50% 0%, rgba(199, 155, 88, 0.16), transparent 65%),
-    radial-gradient(ellipse 50% 40% at 80% 100%, rgba(138, 58, 40, 0.10), transparent 70%),
+    /* overhead brass lamp — strong, off-center */
+    radial-gradient(ellipse 55% 45% at 30% 0%, rgba(225, 175, 95, 0.32), transparent 60%),
+    /* far-corner oxblood sconce */
+    radial-gradient(ellipse 65% 55% at 110% 100%, rgba(170, 70, 50, 0.22), transparent 60%),
+    /* secondary warm glow */
+    radial-gradient(ellipse 35% 30% at 75% 30%, rgba(199, 155, 88, 0.10), transparent 70%),
+    /* edge vignette — darken corners */
+    radial-gradient(ellipse 120% 90% at 50% 50%, transparent 38%, rgba(6, 4, 2, 0.55) 100%),
     var(--bg);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0 0.70  0 0 0 0.8 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.10;
+  mix-blend-mode: overlay;
 }
 .eyebrow {
   display: inline-flex;
