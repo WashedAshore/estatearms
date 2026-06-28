@@ -24,16 +24,16 @@ HEADER = """<!doctype html>
   <meta property="og:title" content="{title} — EstateArms" />
   <meta property="og:description" content="{description}" />
   <meta property="og:type" content="article" />
-  <link rel="canonical" href="https://estatearms.com/{slug}" />
+  <link rel="canonical" href="https://estatearms.com/{slug}.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
 <body>
   <header class="site-header">
-    <a href="/" class="logo" aria-label="EstateArms home">
+    <a href="index.html" class="logo" aria-label="EstateArms home">
       <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <rect x="2" y="2" width="28" height="28" rx="3" stroke="currentColor" stroke-width="1.5" />
         <path d="M9 22 L9 10 L16 16 L23 10 L23 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
@@ -42,10 +42,10 @@ HEADER = """<!doctype html>
       <span>EstateArms</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="/appraisal">Appraisal</a>
-      <a href="/nfa">NFA</a>
-      <a href="/executors">Executors</a>
-      <a href="/about">About</a>
+      <a href="appraisal.html">Appraisal</a>
+      <a href="nfa.html">NFA</a>
+      <a href="executors.html">Executors</a>
+      <a href="about.html">About</a>
     </nav>
     <a href="https://app.estatearms.com/#/auth" class="btn btn-primary btn-sm">Start free</a>
   </header>
@@ -90,18 +90,18 @@ FOOTER = """      </div>
       </div>
       <div>
         <h4>Services</h4>
-        <a href="/appraisal">Appraisal</a>
-        <a href="/nfa">NFA transfer</a>
-        <a href="/inventory">Probate inventory</a>
-        <a href="/comparables">Comparable sales</a>
-        <a href="/catalog">Digital catalog</a>
+        <a href="appraisal.html">Appraisal</a>
+        <a href="nfa.html">NFA transfer</a>
+        <a href="inventory.html">Probate inventory</a>
+        <a href="comparables.html">Comparable sales</a>
+        <a href="catalog.html">Digital catalog</a>
       </div>
       <div>
         <h4>Guides</h4>
-        <a href="/executors">For executors</a>
-        <a href="/nfa-probate">NFA in probate</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="executors.html">For executors</a>
+        <a href="nfa-probate.html">NFA in probate</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div>
         <h4>App</h4>
@@ -191,9 +191,9 @@ PAGES.append(dict(
 <div class="next-reading">
   <h3>Related</h3>
   <ul>
-    <li><a href="/comparables">How we source comparable sales</a></li>
-    <li><a href="/nfa">NFA transfer and correspondence</a></li>
-    <li><a href="/executors">Executor's guide to estate firearms</a></li>
+    <li><a href="comparables.html">How we source comparable sales</a></li>
+    <li><a href="nfa.html">NFA transfer and correspondence</a></li>
+    <li><a href="executors.html">Executor's guide to estate firearms</a></li>
   </ul>
 </div>
 """,
@@ -240,9 +240,9 @@ PAGES.append(dict(
 <div class="next-reading">
   <h3>Related</h3>
   <ul>
-    <li><a href="/nfa-probate">NFA items in probate — full guide</a></li>
-    <li><a href="/executors">Executor's guide to estate firearms</a></li>
-    <li><a href="/appraisal">Estate firearm appraisal</a></li>
+    <li><a href="nfa-probate.html">NFA items in probate — full guide</a></li>
+    <li><a href="executors.html">Executor's guide to estate firearms</a></li>
+    <li><a href="appraisal.html">Estate firearm appraisal</a></li>
   </ul>
 </div>
 """,
@@ -294,9 +294,9 @@ PAGES.append(dict(
 <div class="next-reading">
   <h3>Related</h3>
   <ul>
-    <li><a href="/catalog">Digital cataloging system</a></li>
-    <li><a href="/appraisal">Estate firearm appraisal</a></li>
-    <li><a href="/comparables">Comparable sales research</a></li>
+    <li><a href="catalog.html">Digital cataloging system</a></li>
+    <li><a href="appraisal.html">Estate firearm appraisal</a></li>
+    <li><a href="comparables.html">Comparable sales research</a></li>
   </ul>
 </div>
 """,
@@ -348,9 +348,9 @@ PAGES.append(dict(
 <div class="next-reading">
   <h3>Related</h3>
   <ul>
-    <li><a href="/appraisal">Estate firearm appraisal</a></li>
-    <li><a href="/inventory">Probate firearm inventory</a></li>
-    <li><a href="/catalog">Digital cataloging system</a></li>
+    <li><a href="appraisal.html">Estate firearm appraisal</a></li>
+    <li><a href="inventory.html">Probate firearm inventory</a></li>
+    <li><a href="catalog.html">Digital cataloging system</a></li>
   </ul>
 </div>
 """,
@@ -392,9 +392,9 @@ PAGES.append(dict(
 <div class="next-reading">
   <h3>Related</h3>
   <ul>
-    <li><a href="/inventory">Probate firearm inventory</a></li>
-    <li><a href="/appraisal">Estate firearm appraisal</a></li>
-    <li><a href="/executors">Executor's guide to estate firearms</a></li>
+    <li><a href="inventory.html">Probate firearm inventory</a></li>
+    <li><a href="appraisal.html">Estate firearm appraisal</a></li>
+    <li><a href="executors.html">Executor's guide to estate firearms</a></li>
   </ul>
 </div>
 """,
@@ -416,15 +416,15 @@ PAGES.append(dict(
 <h2>Inventory before anything moves</h2>
 <p>Do not let an item leave the estate's possession before it is photographed, logged, and counted. Every executor who has ever skipped this step regrets it. The most common loss in a firearms estate is not theft — it is a beneficiary "borrowing" a rifle to clean it and never giving it back, with no record that the rifle ever existed in the inventory.</p>
 
-<p>See the <a href="/inventory">probate firearm inventory</a> page for the per-item field list. Photos are non-negotiable.</p>
+<p>See the <a href="inventory.html">probate firearm inventory</a> page for the per-item field list. Photos are non-negotiable.</p>
 
 <h2>Identify the NFA items</h2>
 <p>Walk the inventory and flag every item that is or might be NFA-regulated: suppressors, short-barreled rifles (any rifle with a barrel under 16"), short-barreled shotguns (any shotgun with a barrel under 18"), machine guns of any vintage (yes, including the Thompson the grandfather brought home from the war), AOWs, and DDs.</p>
 
-<p>For each flagged item, locate the tax stamp paperwork in the decedent's records. If you cannot find the paperwork, do not assume the item is unregistered — that is a federal felony to possess. The ATF maintains a registry; the path to confirmation runs through your attorney or an NFA correspondent. See <a href="/nfa-probate">NFA items in probate</a> for the procedural detail.</p>
+<p>For each flagged item, locate the tax stamp paperwork in the decedent's records. If you cannot find the paperwork, do not assume the item is unregistered — that is a federal felony to possess. The ATF maintains a registry; the path to confirmation runs through your attorney or an NFA correspondent. See <a href="nfa-probate.html">NFA items in probate</a> for the procedural detail.</p>
 
 <h2>Get a defensible valuation</h2>
-<p>You will be asked, by the court and probably by the IRS, what the firearms were worth on the date of death. A defensible answer requires a comparable-sales appraisal — not a blue-book number and not a beneficiary's opinion. See <a href="/appraisal">estate firearm appraisal</a>.</p>
+<p>You will be asked, by the court and probably by the IRS, what the firearms were worth on the date of death. A defensible answer requires a comparable-sales appraisal — not a blue-book number and not a beneficiary's opinion. See <a href="appraisal.html">estate firearm appraisal</a>.</p>
 
 <h2>File the inventory</h2>
 <p>Florida personal representatives file a verified inventory within 60 days of issuance of letters. Other states have similar deadlines. The firearms section of the inventory must be itemized, valued, and (for NFA items) flagged with current registration status.</p>
@@ -450,9 +450,9 @@ PAGES.append(dict(
 <div class="next-reading">
   <h3>Related</h3>
   <ul>
-    <li><a href="/nfa-probate">NFA items in probate</a></li>
-    <li><a href="/inventory">Probate firearm inventory</a></li>
-    <li><a href="/nfa">NFA transfer and correspondence</a></li>
+    <li><a href="nfa-probate.html">NFA items in probate</a></li>
+    <li><a href="inventory.html">Probate firearm inventory</a></li>
+    <li><a href="nfa.html">NFA transfer and correspondence</a></li>
   </ul>
 </div>
 """,
@@ -516,9 +516,9 @@ PAGES.append(dict(
 <div class="next-reading">
   <h3>Related</h3>
   <ul>
-    <li><a href="/nfa">NFA transfer and correspondence service</a></li>
-    <li><a href="/executors">Executor's guide to estate firearms</a></li>
-    <li><a href="/appraisal">Estate firearm appraisal</a></li>
+    <li><a href="nfa.html">NFA transfer and correspondence service</a></li>
+    <li><a href="executors.html">Executor's guide to estate firearms</a></li>
+    <li><a href="appraisal.html">Estate firearm appraisal</a></li>
   </ul>
 </div>
 """,
@@ -629,14 +629,14 @@ PAGES.append(dict(
 <p>EstateArms is not a law firm. We do not provide legal advice. We do not appear before the ATF on your behalf. We do not give tax advice. For all of those, work with appropriate counsel and a qualified accountant — and we will hand them clean documents to work from.</p>
 
 <h2>Credentials and references</h2>
-<p>Available on request via the <a href="/contact">contact form</a>. We are happy to provide professional references to other executors, probate attorneys, and estate professionals considering engagement.</p>
+<p>Available on request via the <a href="contact.html">contact form</a>. We are happy to provide professional references to other executors, probate attorneys, and estate professionals considering engagement.</p>
 
 <div class="next-reading">
   <h3>Get started</h3>
   <ul>
-    <li><a href="/contact">Contact for engagement</a></li>
+    <li><a href="contact.html">Contact for engagement</a></li>
     <li><a href="https://app.estatearms.com/#/auth">Create a free account in the catalog</a></li>
-    <li><a href="/executors">Executor's guide to estate firearms</a></li>
+    <li><a href="executors.html">Executor's guide to estate firearms</a></li>
   </ul>
 </div>
 """,
