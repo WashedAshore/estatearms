@@ -52,6 +52,7 @@ HEADER = """<!doctype html>
 
   <main>
     <section class="article-hero">
+{deco_block}
       <div class="container">
         <div class="crumb">{crumb}</div>
         <h1>{h1}</h1>
@@ -120,12 +121,23 @@ FOOTER = """      </div>
 """
 
 
-def page(slug, title, crumb, h1, description, lede, body):
-    """Assemble one HTML file from chrome + body."""
+def page(slug, title, crumb, h1, description, lede, body, decorations=None):
+    """Assemble one HTML file from chrome + body.
+    `decorations` is a list of (image_filename, variant_class) tuples."""
+    deco_block = ""
+    if decorations:
+        lines = []
+        for img, variant in decorations:
+            lines.append(
+                f'      <img src="{img}" alt="" aria-hidden="true" '
+                f'class="page-deco page-deco--{variant}" />'
+            )
+        deco_block = "\n".join(lines)
     html = (
         HEADER.format(
             slug=slug, title=title, crumb=crumb, h1=h1,
             description=description, lede=lede,
+            deco_block=deco_block,
         )
         + body.strip() + "\n"
         + FOOTER
@@ -197,6 +209,7 @@ PAGES.append(dict(
   </ul>
 </div>
 """,
+    decorations=[("schematic-pistol.png", "primary"), ("schematic-revolver.png", "secondary")],
 ))
 
 PAGES.append(dict(
@@ -246,6 +259,7 @@ PAGES.append(dict(
   </ul>
 </div>
 """,
+    decorations=[("schematic-thompson.png", "primary"), ("schematic-suppressor.png", "secondary"), ("schematic-form4.png", "form")],
 ))
 
 PAGES.append(dict(
@@ -300,6 +314,7 @@ PAGES.append(dict(
   </ul>
 </div>
 """,
+    decorations=[("schematic-garand.png", "primary"), ("schematic-shotgun.png", "secondary")],
 ))
 
 PAGES.append(dict(
@@ -354,6 +369,7 @@ PAGES.append(dict(
   </ul>
 </div>
 """,
+    decorations=[("schematic-shotgun.png", "primary"), ("schematic-revolver.png", "secondary")],
 ))
 
 PAGES.append(dict(
@@ -398,6 +414,7 @@ PAGES.append(dict(
   </ul>
 </div>
 """,
+    decorations=[("schematic-ar15.png", "primary"), ("schematic-rifle.png", "secondary")],
 ))
 
 PAGES.append(dict(
@@ -456,6 +473,7 @@ PAGES.append(dict(
   </ul>
 </div>
 """,
+    decorations=[("schematic-form5.png", "form"), ("schematic-revolver.png", "primary")],
 ))
 
 PAGES.append(dict(
@@ -522,6 +540,7 @@ PAGES.append(dict(
   </ul>
 </div>
 """,
+    decorations=[("schematic-form5.png", "form"), ("schematic-thompson.png", "primary"), ("schematic-suppressor.png", "secondary")],
 ))
 
 PAGES.append(dict(
@@ -590,6 +609,7 @@ PAGES.append(dict(
   <p>Contact submissions are read only by the founder. Nothing is shared, sold, or used for marketing. If you prefer, email directly using the address above.</p>
 </div>
 """,
+    decorations=[("schematic-pistol.png", "secondary")],
 ))
 
 PAGES.append(dict(
@@ -640,6 +660,7 @@ PAGES.append(dict(
   </ul>
 </div>
 """,
+    decorations=[("schematic-rifle.png", "primary")],
 ))
 
 # ─── Build all ───
