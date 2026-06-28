@@ -223,6 +223,39 @@ button { font-family: inherit; }
     var(--bg);
   overflow: hidden;
 }
+/* Faint firearm schematics drifting in the hero negative space.
+   Inverted from black-on-transparent line art to warm cream-on-walnut
+   via filter. Very low opacity — felt, not seen. */
+.hero-deco {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+  filter: invert(1) brightness(1.6) sepia(0.3) hue-rotate(345deg) saturate(0.8);
+  mix-blend-mode: screen;
+}
+.hero-deco--pistol {
+  /* large pistol drifting through the right side of the hero */
+  top: 8%;
+  right: -6%;
+  width: clamp(420px, 52vw, 780px);
+  opacity: 0.09;
+  transform: rotate(-4deg);
+}
+.hero-deco--revolver {
+  /* smaller revolver low-left, ghosted further */
+  bottom: -8%;
+  left: -4%;
+  width: clamp(260px, 28vw, 420px);
+  opacity: 0.05;
+  transform: rotate(8deg);
+}
+@media (max-width: 720px) {
+  /* on phones, hide the revolver and keep just one accent */
+  .hero-deco--revolver { display: none; }
+  .hero-deco--pistol { opacity: 0.06; right: -20%; }
+}
+
 .hero::before {
   content: '';
   position: absolute;
