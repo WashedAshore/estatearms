@@ -1,0 +1,8 @@
+.venv/
+uploads/
+scans/
+inventory.csv
+.env
+__pycache__/
+*.pyc
+samples/ui.png
